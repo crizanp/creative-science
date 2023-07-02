@@ -1,0 +1,20 @@
+ErrorDocument 404 /404.php
+
+RewriteEngine On
+
+
+#For HomePage
+
+RewriteRule ^home$ index.php [NC,L]
+RewriteRule ^youtube$ youtube.php [NC,L]
+RewriteRule ^contact$ contact.php [NC,L]
+RewriteRule ^topic$ topic.php [NC,L]
+RewriteRule ^course$ courses.php [NC,L]
+RewriteRule ^post$ post.php [NC,L]
+
+#For Course Page
+
+
+#For topic page
+RewriteRule ^topic/([0-9a-zA-Z_-]+)$ topic.php?&category=$1 [NC,L]
+RewriteRule ^post/([0-9a-zA-Z_-]+)$ post.php?&topic=$1 [NC,L]
